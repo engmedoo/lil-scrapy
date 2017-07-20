@@ -108,7 +108,17 @@ app.get('/:location/:kw/csv', (req, res) => {
 
   mapCityData(cities, keywords)
   .then(cityData => {
-    const events = []
+    const events = [{
+      'Name',
+      'Start Time',
+      'End Time',
+      'Category'
+      'City',
+      'Location',
+      `Visitor Count (as of ${moment.format('MMM D')})`,
+      'Contact Email',
+      'Event URL'
+    }]
 
     cityData.map(city => {
       city.events.map(event => {
@@ -123,7 +133,7 @@ app.get('/:location/:kw/csv', (req, res) => {
           city: city.name,
           location: venue.name,
           visitorCount: attending,
-          contact: venue.emails || false,
+          contact: venue.emails || '',
           url,
         })
       })
