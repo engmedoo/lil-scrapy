@@ -1,0 +1,54 @@
+{
+  "Charlotte": [
+    {
+      "name": "Charlotte",
+      "coords": {
+        "lat": 35.2271,
+        "lng": -80.8431
+      }
+    }
+  ],
+  "Coast": [
+    {
+      "name": "Kinston",
+      "coords": {
+        "lat": 35.2627,
+        "lng": -77.5816
+      }
+    }
+  ],
+  "Mountains": [
+    {
+      "name": "Asheville",
+      "coords": {
+        "lat": 35.5951,
+        "lng": -82.5515
+      }
+    }
+  ],
+  "Triangle": [
+    {
+      "name": "Durham",
+      "coords": {
+        "lat": 35.9940,
+        "lng": -78.8986
+      }
+    },
+    {
+      "name": "Raleigh",
+      "coords": {
+        "lat": 35.7796,
+        "lng": -78.6382
+      }
+    }
+  ],
+  "Triad": [
+    {
+      "name": "Greensboro",
+      "coords": {
+        "lat": 36.0726,
+        "lng": -79.7920
+      }
+    }
+  ]
+}

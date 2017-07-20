@@ -1,0 +1,16 @@
+html
+  head
+    title #{location} Results
+  body
+    h1 #{location} results for
+      each keyword, index in keywords
+        if index > 0
+          | &nbsp;+&nbsp;
+        | "#{keyword}"
+    each city in cityData
+      h2 #{city.name}
+      each event in city.events
+        article
+          h3 #{event.name}
+          p #{event.description}
+    
