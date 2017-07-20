@@ -9,5 +9,8 @@
     "express": "^4.15.3",
     "facebook-events-by-location-core": "^0.3.0",
     "pug": "^2.0.0-rc.2"
+  },
+  "scripts": {
+    "start": "node index.js"
   }
 }
