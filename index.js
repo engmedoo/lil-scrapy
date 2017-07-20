@@ -115,7 +115,7 @@ app.get('/:location/:kw/csv', (req, res) => {
       category: 'Category',
       city: 'City',
       location: 'Location',
-      visitorCount: `Visitor Count (as of ${moment.format('MMM D')})`,
+      visitorCount: `Visitor Count (as of ${moment().format('MMM D')})`,
       contact: 'Contact Email',
       url: 'Event URL'
     }]
