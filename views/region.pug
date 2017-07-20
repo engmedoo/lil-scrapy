@@ -1,0 +1,26 @@
+html
+  head
+    title #{location} Results
+  body
+    h1 #{location} results for
+      each keyword, index in keywords
+        if index > 0
+          | &nbsp;+&nbsp;
+        | "#{keyword}"
+    each city in cityData
+      h2 #{city.name}
+      table
+        thead
+          th Event name
+          th Start Time
+          th End Time
+          th Link
+        tbody
+        each event in city.events
+          tr
+            td #{event.name}
+            td #{event.startTime}
+            td #{event.endTime}
+            td
+              a(href='https://facebook.com/event/'+event.id) View on Facebook
+      

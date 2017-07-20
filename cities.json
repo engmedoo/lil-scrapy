@@ -3,17 +3,150 @@
     {
       "name": "Charlotte",
       "coords": {
-        "lat": 35.2271,
-        "lng": -80.8431
+        "lat": 35.207872,
+        "lng": -80.830075
+      }
+    },
+    {
+      "name": "Concord",
+      "coords": {
+        "lat": 35.393932,
+        "lng": -80.635243
+      }
+    },
+    {
+      "name": "Cornelius",
+      "coords": {
+        "lat": 35.473295,
+        "lng": -80.883943
+      }
+    },
+    {
+      "name": "Gastonia",
+      "coords": {
+        "lat": 35.247298,
+        "lng": -81.183659
+      }
+    },
+    {
+      "name": "Huntersville",
+      "coords": {
+        "lat": 35.405594,
+        "lng": -80.874553
+      }
+    },
+    {
+      "name": "Indian Trail",
+      "coords": {
+        "lat": 35.069631,
+        "lng": -80.645973
+      }
+    },
+    {
+      "name": "Kannapolis",
+      "coords": {
+        "lat": 35.476718,
+        "lng": -80.638679
+      }
+    },
+    {
+      "name": "Matthews",
+      "coords": {
+        "lat": 35.119509,
+        "lng": -80.71011
+      }
+    },
+    {
+      "name": "Mint Hill",
+      "coords": {
+        "lat": 35.178195,
+        "lng": -80.653609
+      }
+    },
+    {
+      "name": "Monroe",
+      "coords": {
+        "lat": 35.006141,
+        "lng": -80.55916
+      }
+    },
+    {
+      "name": "Shelby",
+      "coords": {
+        "lat": 35.288931,
+        "lng": -81.541641
       }
     }
   ],
   "Coast": [
     {
+      "name": "Fayetteville",
+      "coords": {
+        "lat": 35.085131,
+        "lng": -78.979168
+      }
+    },
+    {
+      "name": "Goldsboro",
+      "coords": {
+        "lat": 35.38015,
+        "lng": -77.972441
+      }
+    },
+    {
+      "name": "Greenville",
+      "coords": {
+        "lat": 35.595921,
+        "lng": -77.376613
+      }
+    },
+    {
+      "name": "Havelock",
+      "coords": {
+        "lat": 34.907854,
+        "lng": -76.8985
+      }
+    },
+    {
+      "name": "Jacksonville",
+      "coords": {
+        "lat": 34.732265,
+        "lng": -77.396185
+      }
+    },
+    {
       "name": "Kinston",
       "coords": {
-        "lat": 35.2627,
-        "lng": -77.5816
+        "lat": 35.274784,
+        "lng": -77.593773
+      }
+    },
+    {
+      "name": "New Bern",
+      "coords": {
+        "lat": 35.096733,
+        "lng": -77.073114
+      }
+    },
+    {
+      "name": "Rocky Mount",
+      "coords": {
+        "lat": 35.967544,
+        "lng": -77.804934
+      }
+    },
+    {
+      "name": "Wilmington",
+      "coords": {
+        "lat": 34.210017,
+        "lng": -77.886089
+      }
+    },
+    {
+      "name": "Wilson",
+      "coords": {
+        "lat": 35.734306,
+        "lng": -77.932282
       }
     }
   ],
@@ -21,33 +154,215 @@
     {
       "name": "Asheville",
       "coords": {
-        "lat": 35.5951,
-        "lng": -82.5515
+        "lat": 35.570825,
+        "lng": -82.553735
+      }
+    },
+    {
+      "name": "Boone",
+      "coords": {
+        "lat": 36.210835,
+        "lng": -81.667509
+      }
+    },
+    {
+      "name": "Clemmons",
+      "coords": {
+        "lat": 36.031792,
+        "lng": -80.386085
+      }
+    },
+    {
+      "name": "Hickory",
+      "coords": {
+        "lat": 35.74241,
+        "lng": -81.32311
+      }
+    },
+    {
+      "name": "Lumberton",
+      "coords": {
+        "lat": 34.63078,
+        "lng": -79.018251
+      }
+    },
+    {
+      "name": "Mooresville",
+      "coords": {
+        "lat": 35.299205,
+        "lng": -81.698586
       }
     }
   ],
   "Triangle": [
     {
+      "name": "Apex",
+      "coords": {
+        "lat": 35.726782,
+        "lng": -78.860839
+      }
+    },
+    {
+      "name": "Carrboro",
+      "coords": {
+        "lat": 35.925943,
+        "lng": -79.087814
+      }
+    },
+    {
+      "name": "Cary",
+      "coords": {
+        "lat": 35.781498,
+        "lng": -78.815219
+      }
+    },
+    {
+      "name": "Clayton",
+      "coords": {
+        "lat": 35.659627,
+        "lng": -78.447702
+      }
+    },
+    {
+      "name": "Chapel Hill",
+      "coords": {
+        "lat": 35.926942,
+        "lng": -79.038595
+      }
+    },
+    {
       "name": "Durham",
       "coords": {
-        "lat": 35.9940,
-        "lng": -78.8986
+        "lat": 35.980915	,
+        "lng": -78.905916
+      }
+    },
+    {
+      "name": "Fuquay-Varina",
+      "coords": {
+        "lat": 35.594533,
+        "lng": -78.78099
+      }
+    },
+    {
+      "name": "Garner",
+      "coords": {
+        "lat": 35.695117,
+        "lng": -78.622014
+      }
+    },
+    {
+      "name": "Holly Springs",
+      "coords": {
+        "lat": 35.654736,
+        "lng": -78.838075
+      }
+    },
+    {
+      "name": "Morrisville",
+      "coords": {
+        "lat": 35.835697,
+        "lng": -78.834865
       }
     },
     {
       "name": "Raleigh",
       "coords": {
-        "lat": 35.7796,
-        "lng": -78.6382
+        "lat": 35.832208,
+        "lng": -78.644024
+      }
+    },
+    {
+      "name": "Saxapahaw",
+      "coords": {
+        "lat": 35.948957,
+        "lng": -79.321043
+      }
+    },
+    {
+      "name": "Wake Forest",
+      "coords": {
+        "lat": 35.963144,
+        "lng": -78.515261
       }
     }
   ],
   "Triad": [
     {
+      "name": "Asheboro",
+      "coords": {
+        "lat": 35.716218,
+        "lng": -79.81306
+      }
+    },
+    {
+      "name": "Burlington",
+      "coords": {
+        "lat": 36.082416,
+        "lng": -79.45959
+      }
+    },
+    {
       "name": "Greensboro",
       "coords": {
-        "lat": 36.0726,
-        "lng": -79.7920
+        "lat": 36.096048,
+        "lng": -79.827683
+      }
+    },
+    {
+      "name": "High Point",
+      "coords": {
+        "lat": 35.988124,
+        "lng": -79.993296
+      }
+    },
+    {
+      "name": "Kernersville",
+      "coords": {
+        "lat": 36.106987,
+        "lng": -80.085484
+      }
+    },
+    {
+      "name": "Lexington",
+      "coords": {
+        "lat": 35.801753,
+        "lng": -80.268205
+      }
+    },
+    {
+      "name": "Sanford",
+      "coords": {
+        "lat": 35.482179,
+        "lng": -79.177467
+      }
+    },
+    {
+      "name": "Salisbury",
+      "coords": {
+        "lat": 35.665784,
+        "lng": -80.491049
+      }
+    },
+    {
+      "name": "Statesville",
+      "coords": {
+        "lat": 35.783843,
+        "lng": -80.8707
+      }
+    },
+    {
+      "name": "Thomasville",
+      "coords": {
+        "lat": 35.881287,
+        "lng": -80.080705
+      }
+    },
+    {
+      "name": "Winston-Salem",
+      "coords": {
+        "lat": 36.102945,
+        "lng": -80.260989
       }
     }
   ]

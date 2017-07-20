@@ -1,5 +1,6 @@
 require('dotenv').config()
-const { ACCESS_TOKEN, DISTANCE } = process.env
+const { FEBL_ACCESS_TOKEN, DISTANCE } = process.env
+const DATEFORMAT = 'MMMM D YYYY'
 
 const express     = require('express')
 const app         = express()
@@ -7,6 +8,8 @@ const http        = require('http').Server(app)
 const pug         = require('pug')
 const EventSearch = require('facebook-events-by-location-core')
 const locations   = require('./cities')
+const moment      = require('moment')
+const csv         = require('express-csv')
 
 const mapCityData = (cities, keywords) => {
   let cityData = []
@@ -16,14 +19,14 @@ const mapCityData = (cities, keywords) => {
     cities.map((city, index) => {
       const { name, coords } = city
       const { lat, lng } = coords
-      const es = new EventSearch({
+      const eventSearch = new EventSearch({
         lat,
         lng,
         distance: DISTANCE,
-        accessToken: ACCESS_TOKEN
+        accessToken: FEBL_ACCESS_TOKEN
       })
 
-      es.search().then(data => {
+      eventSearch.search().then(data => {
         const { events } = data
 
         const filteredEvents = events.filter(event => {
@@ -32,9 +35,18 @@ const mapCityData = (cities, keywords) => {
           })
         })
 
+        const sortedEvents = filteredEvents.sort((a, b) => {
+          return new Date(a.startTime) - new Date(b.startTime)
+        }).map(event => {
+          return Object.assign({}, event, {
+            startTime: moment(event.startTime).format(DATEFORMAT),
+            endTime:   moment(event.endTime).format(DATEFORMAT)
+          })
+        })
+
         cityData.push({
           name,
-          events: filteredEvents
+          events: sortedEvents
         })
 
         if(cityData.length === cities.length){
@@ -70,7 +82,7 @@ app.get('/:location/:kw', (req, res) => {
 
   mapCityData(cities, keywords)
   .then(cityData => {
-    res.status(200).render('index', {
+    res.status(200).render('region', {
       location,
       keywords,
       cityData
@@ -81,6 +93,50 @@ app.get('/:location/:kw', (req, res) => {
   })
 })
 
+app.get('/:location/:kw/csv', (req, res) => {
+  const location    = req.params.location
+  const keywords    = req.params.kw.split(',')
+  const cities      = locations[location]
+
+  if(!cities){
+    res.status(404).render('404', { message: `Location '${location}' doesn't exist`  })
+  }
+
+  if(!keywords.length){
+    res.status(404).render('404', { message: `Provide a keyword` })
+  }
+
+  mapCityData(cities, keywords)
+  .then(cityData => {
+    const events = []
+
+    cityData.map(city => {
+      city.events.map(event => {
+        const { name, startTime, endTime, stats, id, venue, category } = event
+        const { attending } = stats
+        const url = `https://facebook.com/events/${id}`
+        events.push({
+          name,
+          startTime,
+          endTime,
+          category,
+          city: city.name,
+          location: venue.name,
+          visitorCount: attending,
+          contact: venue.emails || false,
+          url,
+        })
+      })
+    })
+
+    res.csv(events)
+
+  })
+  .catch(err => {
+    res.status(500).render('500', { err })
+  })
+})
+
 http.listen(process.env.PORT || 3000, () => {
-  console.log('')
+  console.log(FEBL_ACCESS_TOKEN)
 })

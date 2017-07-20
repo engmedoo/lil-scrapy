@@ -1,16 +1,13 @@
+- var terms = 'beer,pint,brew'
 html
   head
-    title #{location} Results
+    title Beer Events Scraper
   body
-    h1 #{location} results for
-      each keyword, index in keywords
-        if index > 0
-          | &nbsp;+&nbsp;
-        | "#{keyword}"
-    each city in cityData
-      h2 #{city.name}
-      each event in city.events
-        article
-          h3 #{event.name}
-          p #{event.description}
-    
+    h1 Beer Events Scraper
+    ul
+      each region in ['Charlotte','Coast','Mountains','Triangle','Triad']
+        - var url = "/"+region+"/"+terms
+        li
+          a(href=url) #{region}
+          | ,&nbsp
+          a(href=url+'/csv') CSV
